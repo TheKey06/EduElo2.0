@@ -9,11 +9,11 @@ import { Footer } from "./views/landing/footer"
 
 export default function Page() {
   return (
-    <main className="scroll-smooth">
+    <main>
       <LandingHeader />
       <Hero />
-      <MissionVision />
       <Features />
+      <MissionVision />
       <Objectives />
       <Footer />
     </main>

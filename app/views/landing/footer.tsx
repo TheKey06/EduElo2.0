@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
@@ -30,6 +32,19 @@ const socialLinks = [
 ]
 
 export function Footer() {
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault()
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        })
+      }
+    }
+  }
+
   return (
     <footer id="contacto" className="bg-foreground text-white">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
@@ -93,8 +108,9 @@ export function Footer() {
                 {footerLinks.empresa.map((link) => (
                   <li key={link.name}>
                     <a 
-                      href={link.href} 
-                      className="text-sm text-white/70 hover:text-white transition-colors"
+                      href={link.href}
+                      onClick={(e) => handleSmoothScroll(e, link.href)}
+                      className="text-sm text-white/70 hover:text-white transition-colors cursor-pointer"
                     >
                       {link.name}
                     </a>
