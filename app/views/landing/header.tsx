@@ -18,6 +18,20 @@ const navLinks = [
 export function LandingHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault()
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        })
+        setMobileMenuOpen(false)
+      }
+    }
+  }
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border scroll-smooth">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
@@ -42,6 +56,7 @@ export function LandingHeader() {
             <a
               key={link.name}
               href={link.href}
+              onClick={(e) => handleSmoothScroll(e, link.href)}
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               {link.name}
@@ -79,8 +94,8 @@ export function LandingHeader() {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleSmoothScroll(e, link.href)}
                 className="block rounded-lg px-3 py-2 text-base font-medium text-muted-foreground hover:bg-accent hover:text-primary"
-                onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
               </a>
