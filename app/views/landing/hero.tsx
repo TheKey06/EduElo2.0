@@ -1,14 +1,15 @@
 import Link from "next/link"
-import { Button } from "@/app/components/ui/buttons/button"
+import { Button } from "@/app/views/ui/buttons/button"
 import { ArrowRight, PlayCircle } from "lucide-react"
+import '@/styles/globals.css';
 
 export function Hero() {
   return (
     <section id="inicio" className="relative overflow-hidden bg-background pt-32 pb-20 lg:pt-40 lg:pb-32">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 h-[500px] w-[500px] rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 h-[400px] w-[400px] rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 h-125 w-125 rounded-full bg-primary/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 h-125 w-125 rounded-full bg-primary/10 blur-3xl" />
       </div>
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -36,12 +37,12 @@ export function Hero() {
           {/* CTA Buttons */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/">
-              <Button size="lg" className="gap-2">
+              <Button size="lg" className="gap-2" variant='default'>
                 Comenzar ahora
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="gap-2 bg-transparent">
+            <Button size="lg" className="gap-2" variant="outline">
               <PlayCircle className="h-5 w-5" />
               Ver como funciona
             </Button>

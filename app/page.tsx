@@ -1,10 +1,10 @@
 
-import { LandingHeader } from "./components/landing/header"
-import { MissionVision } from "./components/landing/mission-vision"
-import { Hero } from "./components/landing/hero"
-import { Objectives } from "./components/landing/objectives"
-import { Features } from "./components/landing/features"
-import { Footer } from "./components/landing/footer"
+import { LandingHeader } from "./views/landing/header"
+import { MissionVision } from "./views/landing/mission-vision"
+import { Hero } from "./views/landing/hero"
+import { Objectives } from "./views/landing/objectives"
+import { Features } from "./views/landing/features"
+import { Footer } from "./views/landing/footer"
 
 
 export default function Page() {

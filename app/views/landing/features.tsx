@@ -12,7 +12,7 @@ import {
   CardTitle,
   CardDescription,
   CardContent,
-} from "@/app/components/ui/card"
+} from "@/app/views/ui/card"
 
 const features = [
   {

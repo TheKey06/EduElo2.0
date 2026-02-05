@@ -42,7 +42,7 @@ export function MissionVision() {
 
           {/* Vision */}
           <div className="relative overflow-hidden rounded-2xl bg-foreground p-8 lg:p-10">
-            <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 h-64 w-64 rounded-full bg-white/5 blur-3xl" />
+            <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 h-64 w-64 rounded-full bg-card-vision blur-3xl" />
             <div className="relative">
               <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white/10">
                 <Eye className="h-7 w-7 text-white" />
