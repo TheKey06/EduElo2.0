@@ -11,8 +11,10 @@ const navLinks = [
   { name: "Inicio", href: "#inicio" },
   { name: "Caracteristicas", href: "#caracteristicas" },
   { name: "Mision y Vision", href: "#mision-vision" },
+  {name: "Suscripciones", href:"Suscripciones"}, 
   { name: "Objetivos", href: "#objetivos" },
   { name: "Contacto", href: "#contacto" },
+  
 ]
 
 export function LandingHeader() {
